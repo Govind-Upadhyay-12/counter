@@ -1,2 +1,4 @@
 # counter
-counter using javascript
+counter using javascript 
+here we have created counter using javascript using javascript
+

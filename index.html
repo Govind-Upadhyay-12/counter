@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: bisque;
+    }
+    .container{
+        display: flex;
+        gap:12%;
+        margin-left: 34%;
+        margin-top: 10%;
+        
+        
+        
+
+    }
+     .dec{
+        border:2px solid black;
+        border-radius: 32px;
+        font-size: 23px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        background-color: red;
+        
+     }
+     .res{
+        border: 2px solid black;
+         border-radius: 32px ;
+         font-size: 23px;
+         font-family: Verdana, Geneva, Tahoma, sans-serif;
+        
+        
+     }
+     .inc{
+        border: 2px solid black;
+        border-radius: 32px;
+        font-size: 23px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        background-color: green;
+        
+
+     }
+     .classh1{
+        margin-left: 44%;
+        margin-top: 70px;
+        font-size: 30px;
+        font-family: cursive;
+        
+        
+     }
+     #value{
+        margin-left: 50%;
+        font-size: 70px;
+        margin-top: 80px;
+        
+        
+     }
+
+
+</style>
+<body>
+    <div class="classh1">
+    <h1>Counter</h1>
+    </div>
+    <div id="value">
+    <span>0</span>
+</div>
+    <div class="container">
+        <button class="dec">Decrease</button>
+        <button class="res">Reset</button>
+        <button class="inc">Increase</button>
+    </div>
+  <script>
+ let count=0;
+let value=document.querySelector('#value');
+let btns=document.querySelectorAll('.container');
+
+btns.forEach(function(items){
+    items.addEventListener('click',function(e){
+        let style=e.target.classList;
+        if(style.contains('dec')){
+            count--;
+      
+        }
+        else if(style.contains('inc')){
+            count++;
+        }
+        else{
+            count=0;
+        }
+        if(count>0){
+            value.style.color="orange";
+        }
+        if(count<0){
+            value.style.color="red";
+        }
+        // if(count>0){
+        //     body.style.color="blue"
+        // }
+
+     
+        value.textContent=count;
+        
+    })
+    
+})
+  </script>
+</body>
+</html>
